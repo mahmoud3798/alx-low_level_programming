@@ -1,13 +1,11 @@
 #include <stdio.h>
-
 /**
- * main -  Entry Point 
+ *main - Entry point
  *
- * Description: Program to print using printf function.
+ *Description: A C progam that prints with printf function.
  *
- * Return: default 0 means (success)
+ *Return: Always 0 (Success)
 */
-
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
