@@ -10,6 +10,7 @@ int main(void)
 {
 	int n;
 	int m;
+	int k;
 
 	for (n = 0; n < 10; n++)
 	{
