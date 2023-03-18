@@ -20,13 +20,12 @@ int main(void)
 			putchar(' ');
 			putchar((m / 10) + '0');
 			putchar((m % 10) + '0');
-			if (n != 98 && m != 99)
+			if (n ==  98 && m == 99)
 			{
-				putchar(',');
-				putchar(' ');
-			}
-			else
 				continue;
+			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
