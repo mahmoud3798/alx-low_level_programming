@@ -27,7 +27,7 @@ float squareRoot(float a)
 }
 void maxPrimeFactors(long int n)
 {
-	long int maxPrime = -1;
+	long int maxPrime;
 	int i;
 
 	while (n % 2 == 0)
