@@ -5,10 +5,22 @@
 * main - Entry point.
 * Description: Write a program that finds and prints the largest prime factor
 *	of the number 612852475143, followed by a new line.
+* maxPrimeFactors: Function to get max prime factor
 * Return: always 0
-* maxPrimeFactors: funtion to get maximum prime number
 * @n: number to get its prime factors
 */
+double squareRoot(double a) 
+{    
+	double i = 0;
+	double j = a / 2;
+
+	while (j != i)
+	{
+		i = j;
+		j = (a / i + i) / 2;
+	}
+	return j;
+}
 long int maxPrimeFactors(long int n)
 {
 	long int maxPrime = -1;
@@ -23,7 +35,7 @@ long int maxPrimeFactors(long int n)
 		maxPrime = 3;
 		n = n / 3;
 	}
-	for (int i = 5; i <= sqrt(n); i += 6)
+	for (int i = 5; i <= squareRoot(n); i += 6)
 	{
 		while (n % i == 0)
 		{
@@ -38,7 +50,7 @@ long int maxPrimeFactors(long int n)
 	}
 	if (n > 4)
 		maxPrime = n;
-	return (maxPrime);
+	return maxPrime;
 }
 int main(void)
 {
