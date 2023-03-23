@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* squareRoot - function to calc square root
+* squareNum - function to calc square root
 * @a: number to calc its square root
 * Return: Result
 */
