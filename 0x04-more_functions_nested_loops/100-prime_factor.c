@@ -1,6 +1,7 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include "main.h"
 # include <math.h>
+
 /**
 * main - Entry point.
 * Description: Write a program that finds and prints the largest prime factor
@@ -11,10 +12,11 @@
 * @n: number to get its prime factors
 * @a: number to calc its square root
 */
-double squareRoot(double a)
+
+float squareRoot(float a)
 {
-	double i = 0;
-	double j = a / 2;
+	float i = 0;
+	float j = a / 2;
 
 	while (j != i)
 	{
@@ -26,31 +28,22 @@ double squareRoot(double a)
 long int maxPrimeFactors(long int n)
 {
 	long int maxPrime = -1;
+	int i;
 
 	while (n % 2 == 0)
 	{
 		maxPrime = 2;
-		n >>= 1;
+		n = n / 2;
 	}
-	while (n % 3 == 0)
-	{
-		maxPrime = 3;
-		n = n / 3;
-	}
-	for (int i = 5; i <= squareRoot(n); i += 6)
+	for (i = 3; i <= squareRoot(n); i += 2)
 	{
 		while (n % i == 0)
 		{
 			maxPrime = i;
 			n = n / i;
 		}
-		while (n % (i + 2) == 0)
-		{
-			maxPrime = i + 2;
-			n = n / (i + 2);
-		}
 	}
-	if (n > 4)
+	if (n > 2)
 		maxPrime = n;
 	return (maxPrime);
 }
@@ -58,6 +51,6 @@ int main(void)
 {
 	long int n = 612852475143;
 
-	printf("%d", maxPrimeFactors(n));
+	printf("%d\n", maxPrimeFactors(n));
 	return (0);
 }
