@@ -2,14 +2,9 @@
 #include "main.h"
 
 /**
-* main - Entry point.
-* Description: Write a program that finds and prints the largest prime factor
-*	of the number 612852475143, followed by a new line.
-* maxPrimeFactors: find max prime factor
-* squareRoot: function to calc square root
-* Return: always 0
-* @n: number to get its prime factors
+* squareRoot - function to calc square root
 * @a: number to calc its square root
+* Return: Result
 */
 
 float squareRoot(float a)
@@ -24,6 +19,11 @@ float squareRoot(float a)
 	}
 	return (j);
 }
+
+/**
+* maxPrimeFactors - find max prime factor
+* @n: number to get its prime factors
+*/
 void maxPrimeFactors(long int n)
 {
 	long int maxPrime;
@@ -46,6 +46,13 @@ void maxPrimeFactors(long int n)
 		maxPrime = n;
 	printf("%d\n", maxPrime);
 }
+
+/**
+* main - Entry point.
+* Description: Write a program that finds and prints the largest prime factor
+*       of the number 612852475143, followed by a new line.
+* Return: always 0
+*/
 int main(void)
 {
 	maxPrimeFactors(612852475143);
