@@ -25,7 +25,7 @@ float squareRoot(float a)
 	}
 	return (j);
 }
-long int maxPrimeFactors(long int n)
+void maxPrimeFactors(long int n)
 {
 	long int maxPrime = -1;
 	int i;
@@ -45,12 +45,12 @@ long int maxPrimeFactors(long int n)
 	}
 	if (n > 2)
 		maxPrime = n;
-	return (maxPrime);
+	printf("%d\n", maxPrime);
 }
 int main(void)
 {
 	long int n = 612852475143;
 
-	printf("%d\n", maxPrimeFactors(n));
+	maxPrimeFactors(n);
 	return (0);
 }
