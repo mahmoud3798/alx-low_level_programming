@@ -52,9 +52,7 @@ void maxPrimeFactors(long int n)
 */
 int main(void)
 {
-	int n = 612852475143;
-
-	maxPrimeFactors(n);
+	maxPrimeFactors(612852475143);
 
 	return (0);
 }
