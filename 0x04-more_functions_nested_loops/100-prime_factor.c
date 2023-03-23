@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
 * squareNum - function to calc square root
 * @a: number to calc its square root
@@ -41,7 +41,8 @@ void maxPrimeFactors(long int n)
 	}
 	if (n > 2)
 		maxPrime = n;
-	printf("%d\n", maxPrime);
+	_putchar(maxPrime + 48);
+	_putchar('\n');
 }
 
 /**
