@@ -6,7 +6,7 @@
 * Return: Result
 */
 
-float squareRoot(float a)
+double sqrtNum(double a)
 {
 	float i = 0;
 	float j = a / 2;
@@ -25,13 +25,13 @@ float squareRoot(float a)
 */
 void maxPrimeFactors(long int n)
 {
-	long int maxPrime;
+	int maxPrime;
 	int i;
 
 	while (n % 2 == 0)
 		n = n / 2;
 
-	for (i = 3; i <= squareRoot(n); i += 2)
+	for (i = 3; i <= sqrtNum(n); i = i + 2)
 	{
 		while (n % i == 0)
 		{
@@ -53,5 +53,6 @@ void maxPrimeFactors(long int n)
 int main(void)
 {
 	maxPrimeFactors(612852475143);
+
 	return (0);
 }
