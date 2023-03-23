@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-# include <math.h>
 
 /**
 * main - Entry point.
@@ -49,8 +48,6 @@ void maxPrimeFactors(long int n)
 }
 int main(void)
 {
-	long int n = 612852475143;
-
-	maxPrimeFactors(n);
+	maxPrimeFactors(612852475143);
 	return (0);
 }
