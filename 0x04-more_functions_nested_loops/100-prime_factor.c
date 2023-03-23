@@ -25,7 +25,7 @@ double sqrtNum(double a)
 */
 void maxPrimeFactors(long int n)
 {
-	int maxPrime;
+	int max;
 	int i;
 
 	while (n % 2 == 0)
@@ -36,12 +36,12 @@ void maxPrimeFactors(long int n)
 		while (n % i == 0)
 		{
 			n = n / i;
-			maxPrime = i;
+			max = i;
 		}
 	}
 	if (n > 2)
-		maxPrime = n;
-	printf("%d\n", maxPrime);
+		max = n;
+	printf("%d\n", max);
 }
 
 /**
@@ -52,7 +52,9 @@ void maxPrimeFactors(long int n)
 */
 int main(void)
 {
-	maxPrimeFactors(612852475143);
+	int n = 612852475143;
+
+	maxPrimeFactors(n);
 
 	return (0);
 }
