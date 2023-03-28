@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* void puts_half - prints half of a string, followed by a new line.
+* puts_half - prints half of a string, followed by a new line.
 * @str: char array
 */
 void puts_half(char *str)
@@ -13,7 +13,7 @@ void puts_half(char *str)
 	{
 		count++;
 	}
-	n = (count ) / 2;
+	n = (count) / 2;
 	for (i = n; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	_putchar('\n');
