@@ -15,9 +15,9 @@ char *_strcat(char *dest, char *src)
 		count++;
 	while (src[count2])
 	{
-		count++;
 		dest[count] = src[count2];
 		count2++;
+		count++;
 	}
 	return (dest);
 }
