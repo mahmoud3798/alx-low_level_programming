@@ -39,13 +39,13 @@ char *cap_string(char *s)
 
 	while (*s)
 	{
-		if (ISdelimeter == 1 && low(*s))
+		if (Deli(*s))
+			ISdelimeter = 1;
+		else if (ISdelimeter == 1 && low(*s))
 		{
 			*s -= 32;
 			ISdelimeter = 0;
 		}
-		else if (Deli(*s))
-			ISdelimeter = 1;
 		else
 			ISdelimeter = 0;
 		s++;
