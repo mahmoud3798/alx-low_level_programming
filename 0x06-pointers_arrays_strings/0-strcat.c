@@ -10,7 +10,7 @@
 char *_strcat(char *dest, char *src)
 {
 	int count = 0, count2 = 0;
-	
+
 	while (dest[count])
 		count++;
 	while (src[count2])
@@ -19,5 +19,5 @@ char *_strcat(char *dest, char *src)
 		dest[count] = src[count2];
 		count2++;
 	}
-	return dest;
+	return (dest);
 }
