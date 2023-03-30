@@ -7,10 +7,10 @@
 */
 int Deli(char s)
 {
-	char d[] = " \t\n;,.!?\"(){}";
+	char d[] = " \t\n,.!?\"(){}";
 	int i;
 
-	for (i = 0; i < 13; i++)
+	for (i = 0; i < 12; i++)
 		if (s == d[i])
 			return (1);
 	return (0);
@@ -39,7 +39,7 @@ char *cap_string(char *s)
 
 	while (*s)
 	{
-		if (ISdelimeter && low(*s))
+		if (ISdelimeter == 1 && low(*s))
 		{
 			*s -= 32;
 			ISdelimeter = 0;
