@@ -50,5 +50,5 @@ char *cap_string(char *s)
 			ISdelimeter = 0;
 		s++;
 	}
-	return (s);
+	return (p);
 }
