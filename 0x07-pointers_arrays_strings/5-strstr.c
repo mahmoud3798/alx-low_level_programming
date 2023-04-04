@@ -9,19 +9,15 @@
 */
 int _strcmp(char *s1, char *s2, unsigned int c)
 {
-	int cmp = 0;
+	unsigned int i = 0;
 
-	while (*s1 && cmp <= c)
+	while (i <= c && *s1 == *s2 && *s1 != '\0' && *s2 != '\0')
 	{
-		if (*s1 != *s2)
-		{
-			cmp = ((int)*s1 - 48) - ((int)*s2 - 48);
-			break;
-		}
 		s1++;
 		s2++;
+		i++;
 	}
-	return (cmp - c);
+	return (i - c);
 }
 /**
 * _strstr - function that locates a substring.
