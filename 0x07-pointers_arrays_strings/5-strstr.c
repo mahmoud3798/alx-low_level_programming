@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 		i++;
 	while (*haystack != '\0')
 	{
-		if (_strncmp(haystack, needle, i) == 0)
+		if (_strcmp(haystack, needle, i) == 0)
 			return (haystack);
 		haystack++;
 	}
