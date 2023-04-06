@@ -20,7 +20,7 @@ int prime(int x, int y)
 {
 	if (x % y == 0 || x <= 1)
 		return (0);
-	else if (y >= x && x >= 2)
+	else if (y >= x && x > 1)
 		return (1);
 	else
 		return (prime(x, y + 1));
