@@ -26,6 +26,7 @@ int last(char *c)
 	{
 		end += last(c + 1) + 1;
 	}
+	return (end);
 }
 /**
 * pali - check if s is palindrome
