@@ -1,5 +1,6 @@
 #include "main.h"
 int pali(char *c, int s, int mid, int e);
+int last(char *c);
 /**
 * is_palindrome -  function that returns 1 if
 *	a string is a palindrome and 0 if not.
@@ -8,14 +9,23 @@ int pali(char *c, int s, int mid, int e);
 */
 int is_palindrome(char *s)
 {
+	int end = last(s);
+
+	return (pali(s, 0, end % 2, end - 1));
+}
+/**
+* last-  function that return last index
+* @c: char pointer
+* Return: last index
+*/
+int last(char *c)
+{
 	int end = 0;
 
-	while (*s > '\0')
+	if (*s > '\0')
 	{
-		end++;
-		s++;
+		end += last(c + 1) + 1;
 	}
-	return (pali(s, 0, end % 2, end - 1));
 }
 /**
 * pali - check if s is palindrome
