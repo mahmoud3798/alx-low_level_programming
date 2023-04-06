@@ -22,7 +22,7 @@ int last(char *c)
 {
 	int end = 0;
 
-	if (*s > '\0')
+	if (*c > '\0')
 	{
 		end += last(c + 1) + 1;
 	}
