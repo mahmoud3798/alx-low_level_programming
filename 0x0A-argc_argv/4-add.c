@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 		ch = argv[argc];
 		while (*ch)
 		{
-			if (*c < '0' || *c > '9')
+			if (*ch < '0' || *ch > '9')
 			{
 				printf("Error\n");
 				return (1);
