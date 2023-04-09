@@ -13,15 +13,13 @@ int main(int argc, char const *argv[])
 
 	while (--argc)
 	{
-		ch = argv[argc];
-		while (*ch)
+		for (ch = argv[argc]; *ch; ch++)
 		{
 			if (*ch < '0' || *ch > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			ch++;
 		}
 		res += atoi(argv[argc]);
 	}
