@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
-* _strcmp - function that compares two strings.
+* _strcomp - function that compares two strings.
 * @s1: char pointer
 * @s2: char pointer
 * @c: integer variable
 * Return: integer
 */
-int _strcmp(char *s1, char *s2, unsigned int c)
+int _strcomp(char *s1, char *s2, unsigned int c)
 {
 	unsigned int i = 0;
 
@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 		i++;
 	while (*haystack != '\0')
 	{
-		if (_strcmp(haystack, needle, i) == 0)
+		if (_strcomp(haystack, needle, i) == 0)
 			return (haystack);
 		haystack++;
 	}
