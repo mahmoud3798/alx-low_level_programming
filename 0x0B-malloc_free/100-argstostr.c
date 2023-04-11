@@ -21,13 +21,12 @@ int Length(char *arr)
 char *argstostr(int ac, char **av)
 {
 	char *ch;
+	int i = 0, count = 0;
 
 	if (ac == 0 || av == 0)
 	{
 		return (NULL);
 	}
-	int i = 0, count = 0;
-
 	while (i < ac)
 	{
 		count += Length(av[i]);
@@ -48,7 +47,7 @@ char *argstostr(int ac, char **av)
 			j = 0;
 			while (av[i][j] != '\0')
 			{
-				ch[c2] == av[i][j];
+				ch[c2] = av[i][j];
 				j++;
 				c2++;
 			}
