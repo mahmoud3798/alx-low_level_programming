@@ -9,13 +9,12 @@
 */
 int main(int argc, char *argv[])
 {
-	int cash = atoi(argv[1]);
-	int cent[] = {25, 10, 5, 2, 1};
-	int minCoins = 0;
-
 	if (argc == 2)
 	{
 		int i;
+		int cash = atoi(argv[1]);
+		int cent[] = {25, 10, 5, 2, 1};
+		int minCoins = 0;
 
 		for (i = 0; i < 5; i++)
 		{
