@@ -30,11 +30,11 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		count += Length(ar[i]);
+		count += Length(av[i]);
 		i++;
 		count++;
 	}
-	ch = malloc(sizeof(char) * nc + 1);
+	ch = malloc(sizeof(char) * count + 1);
 	if (ch == 0)
 	{
 		return (NULL);
