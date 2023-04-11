@@ -13,12 +13,7 @@ int main(int argc, char *argv[])
 	int cent[] = {25, 10, 5, 2, 1};
 	int minCoins = 0;
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
+	if (argc == 2)
 	{
 		int i;
 
@@ -33,6 +28,11 @@ int main(int argc, char *argv[])
 			}
 		}
 		printf("%d\n", minCoins);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
