@@ -12,7 +12,7 @@ char *create_array(unsigned int size, char c)
 
 	if (arr == 0 || size == 0)
 		return (0);
-	while (size >= 0)
+	while (size--)
 	{
 		arr[size] = c;
 	}
