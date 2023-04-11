@@ -8,11 +8,11 @@
 */
 char *_strdup(char *str)
 {
-	if (str == NULL)
-		return (NULL);
 	int s;
 	char *ch;
 
+	if (str == NULL)
+		return (NULL);
 	s = 0;
 	while (str[s] != '\0')
 		s++;
