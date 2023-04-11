@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 
 		for (i = 0; i < 5; i++)
 		{
-			if (cent[i] < cash)
+			if (cash >= cent[i])
 			{
 				minCoins += cash / cent[i];
 				cash = cash % cent[i];
 				if (cash % cent[i] == 0)
-					break
+					break;
 			}
 		}
 		printf("%d\n", minCoins);
