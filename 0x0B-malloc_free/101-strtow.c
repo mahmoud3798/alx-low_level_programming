@@ -13,7 +13,7 @@ int count(char *arr)
 		if (arr[m] == ' ')
 		{
 			if (arr[m + 1] != '\0' && arr[m + 1] != ' ')
-				c++;	
+				c++;
 		}
 		else if (m == 0)
 		{
@@ -32,25 +32,43 @@ int count(char *arr)
 char **strtow(char *str)
 {
 	char **ch;
-	int c = 0, i = 0;
+	int c = 0, c2 = 0, i = 0, j, m, k;
 
 	if (str == NULL || *str == '\0')
-	{
 		return (NULL);
-	}
 	c = count(str);
 	if (c == 1)
-	{
 		return (NULL);
-	}
-	ch =(char **)malloc(c * sizeof(char *));
+	ch = (char **)malloc(c * sizeof(char *));
 	if (ch == NULL)
-	{
 		return (NULL);
-	}
 	ch[c - 1] = NULL;
-	while(str[i])
+	while (str[i])
 	{
-		
+		if ((i == 0 || str[i - 1] == ' ') && str[i] != ' ')
+		{
+			j = 1;
+			while (str[i + j] != ' ' && str[i + j])
+				j++;
+			j++;
+			ch[c2] = (char *)malloc(j * sizeof(char));
+			j--;
+			if (ch[c2] == NULL)
+			{
+				for (m = 0; m < c2; m++)
+					free(ch[m]);
+				free(ch[c - 1]);
+				free(ch);
+				return (NULL);
+			}
+			for (k = 0; k < j; k++)
+				ch[c2][k] = str[i + k];
+			ch[c2][k] = '\0';
+			c2++;
+			i += j;
+		}
+		else
+			i++;
 	}
+	return (ch);
 }
