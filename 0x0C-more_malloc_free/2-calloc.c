@@ -6,17 +6,17 @@
 * @n: unsigned int variable
 * Return: char pointer
 */
-/**char *_fillmem(char *s, char b, unsigned int n)
-*{
-*	char *ptr = s;
-*	unsigned int i;
-*
-*	for (i = 0; n > 0; n--, i++)
-*	{
-*		s[i] = b;
-*	}
-*	return (ptr);
-}*/
+char *_fillmem(char *s, char b, unsigned int n)
+{
+	char *ptr = s;
+	unsigned int i;
+
+	for (i = 0; n > 0; n--, i++)
+	{
+		s[i] = b;
+	}
+	return (ptr);
+}
 /**
 * _calloc - function that allocates memory for an array, using malloc.
 * @nmemb: first parameter
@@ -26,7 +26,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
-	unsigned int n, i;
 
 	if (size == 0 || nmemb == 0)
 	{
@@ -37,11 +36,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	n = (sizeof(int) * nmemb);
-	for (i = 0; n > 0; n--, i++)
-	{
-		ptr[i] = 0;
-	}
-	/*_fillmem(ptr, 0, (sizeof(int) * nmemb));*/
+	_fillmem(ptr, 0, (sizeof(int) * nmemb));
 	return (ptr);
 }
