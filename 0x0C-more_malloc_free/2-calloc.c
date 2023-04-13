@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-* _fillmem - function that fills memory with a constant byte.
+* _memset - function that fills memory with a constant byte.
 * @s: char pointer
 * @b: char variable
 * @n: unsigned int variable
 * Return: char pointer
 */
-char *_fillmem(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 	unsigned int i;
@@ -36,6 +36,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	_fillmem(ptr, 0, (sizeof(int) * nmemb));
+	_memset(ptr, 0, (sizeof(int) * nmemb));
 	return (ptr);
 }
