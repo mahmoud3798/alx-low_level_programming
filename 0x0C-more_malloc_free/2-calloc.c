@@ -8,13 +8,14 @@
 */
 char *_fillmem(char *s, char b, unsigned int n)
 {
+	char *ptr = s;
 	unsigned int i;
 
 	for (i = 0; n > 0; n--, i++)
 	{
 		s[i] = b;
 	}
-	return (s);
+	return (ptr);
 }
 /**
 * _calloc - function that allocates memory for an array, using malloc.
@@ -31,7 +32,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	ptr = malloc(sizeof(int) * nmemb);
-	if (ptr == NULL)
+	if (ptr == 0)
 	{
 		return (NULL);
 	}
