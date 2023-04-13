@@ -9,14 +9,12 @@
 char *_fillmem(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
-	/*unsigned int i;*/
+	unsigned int i;
 
-	/*for (i = 0; n > 0; n--, i++)
+	for (i = 0; n > 0; n--, i++)
 	{
 		s[i] = b;
-	}*/
-	while (n--)
-		*s++ = b;
+	}
 	return (ptr);
 }
 /**
