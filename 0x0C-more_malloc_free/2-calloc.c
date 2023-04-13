@@ -11,7 +11,7 @@ char *_fillmem(char *s, char b, unsigned int n)
 	char *ptr = s;
 	unsigned int i;
 
-	for (i = 0; n >= 0; n--, i++)
+	for (i = 0; n > 0; n--, i++)
 	{
 		s[i] = b;
 	}
@@ -27,7 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
 
-	if (nmemb == 0 || size == 0)
+	if (size == 0 || nmemb == 0)
 	{
 		return (NULL);
 	}
@@ -36,6 +36,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	_fillmem(ptr, 0, sizeof(int) * nmemb);
+	_fillmem(ptr, 0, (sizeof(int) * nmemb));
 	return (ptr);
 }
