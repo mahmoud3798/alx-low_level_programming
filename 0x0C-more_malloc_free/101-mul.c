@@ -45,7 +45,7 @@ int _atoi(char *s)
 */
 int main(int argc, char *argv[])
 {
-	int i = 1;
+	int i;
 
 	malloc();
 	if (argc != 3)
@@ -53,14 +53,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	while (i < argc)
+	for (i = 1; i < argc; i++)
 	{
 		if (_digit(argv[i]))
 		{
 			printf("Error\n");
 			exit(98);
 		}
-		i++;
 	}
 	return (0);
 }
