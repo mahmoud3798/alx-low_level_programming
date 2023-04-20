@@ -24,7 +24,7 @@ void format_int(char *separator, va_list p)
 */
 void format_float(char *separator, va_list p)
 {
-	printf("%s%f", separator, va_arg(p, int));
+	printf("%s%f", separator, va_arg(p, double));
 }
 /**
 * format_string - function
