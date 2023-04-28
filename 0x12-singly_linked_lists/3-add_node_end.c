@@ -22,9 +22,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		ptr->len = _strlen(ptr->str);
 	}
-	if (p != NULL)
+	if (p)
 	{
-		while (p->next != NULL)
+		while (p->next)
 			p = p->next;
 		p->next = ptr;
 	}
