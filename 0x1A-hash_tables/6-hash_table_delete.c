@@ -20,14 +20,14 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	while (ind < ht->size)
 	{
-		hdTmp = ht->array[ind];
-		while (hdTmp)
+		hdtmp = ht->array[ind];
+		while (hdtmp)
 		{
-			tmp = hdTmp->next;
-			free(hdTmp->key);
-			free(hdTmp->value);
-			free(hdTmp);
-			hdTmp = tmp;
+			tmp = hdtmp->next;
+			free(hdtmp->key);
+			free(hdtmp->value);
+			free(hdtmp);
+			hdtmp = tmp;
 		}
 
 		ind++;
